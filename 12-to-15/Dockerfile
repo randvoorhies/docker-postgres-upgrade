@@ -4,6 +4,8 @@ RUN sed -i 's/$/ 12/' /etc/apt/sources.list.d/pgdg.list
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		postgresql-12=12.13-1.pgdg110+1 \
+        postgresql-plpython3-12 \
+        postgresql-plpython3-15 \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV PGBINOLD /usr/lib/postgresql/12/bin
