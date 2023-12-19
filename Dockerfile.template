@@ -6,6 +6,8 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		postgresql-{{ .old }}={{ .version | @sh }} \
+		postgresql-plpython3-{{ .old }} \
+		postgresql-plpython3-{{ .new }} \
 	; \
 	rm -rf /var/lib/apt/lists/*
 

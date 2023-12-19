@@ -12,6 +12,8 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		postgresql-15='15.5-1.pgdg120+1' \
+		postgresql-plpython3-15 \
+		postgresql-plpython3-16 \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
